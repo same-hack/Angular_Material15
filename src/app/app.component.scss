@@ -51,7 +51,7 @@
     .mdc-radio__outer-circle {
       border-color: pink;
     }
-    // enabledにした際の色
+    // checkedにした際の色
     .mat-mdc-radio-button.mat-accent {
       --mdc-radio-selected-focus-icon-color: limegreen;
       --mdc-radio-selected-hover-icon-color: limegreen;
@@ -59,7 +59,8 @@
       --mdc-radio-selected-pressed-icon-color: limegreen;
       --mat-mdc-radio-checked-ripple-color: limegreen;
     }
-    // 選択した際の枠線の色
+    // checkedにした際の枠線の色
+    // ※未選択時の枠線の色が未設定の場合は不要
     .mat-mdc-radio-button
       .mdc-radio
       .mdc-radio__native-control:enabled:checked
