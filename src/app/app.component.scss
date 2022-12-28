@@ -1,0 +1,75 @@
+:host ::ng-deep {
+  // チェックボックス
+  #checkbox-wrap {
+    .mat-mdc-checkbox.mat-accent {
+      // チェックマークの色
+      --mdc-checkbox-selected-checkmark-color: red;
+      // ボックス内の色
+      --mdc-checkbox-selected-focus-icon-color: yellow;
+      --mdc-checkbox-selected-hover-icon-color: yellow;
+      --mdc-checkbox-selected-icon-color: yellow;
+      --mdc-checkbox-selected-pressed-icon-color: yellow;
+      // クリックした際の枠の色
+      --mdc-checkbox-unselected-focus-icon-color: red;
+      // ホバーした際の枠の色
+      --mdc-checkbox-unselected-hover-icon-color: red;
+      // disabledの際の枠の色
+      --mdc-checkbox-disabled-selected-icon-color: aqua;
+      --mdc-checkbox-disabled-unselected-icon-color: aqua;
+      // 未選択時の枠の色
+      --mdc-checkbox-unselected-icon-color: limegreen;
+      --mdc-checkbox-unselected-pressed-icon-color: limegreen;
+    }
+
+    // テキストの色
+    .mat-mdc-checkbox .mdc-form-field {
+      color: red;
+    }
+
+    // enableにしたときのフワっと出る影
+    // ※別の箇所をクリックしないと影が消えないのは仕様
+    .mat-mdc-checkbox.mat-accent
+      .mdc-checkbox--selected
+      ~ .mdc-checkbox__ripple {
+      background: yellow;
+    }
+
+    // disabledにしたときのフワっと出る影
+    // ※別の箇所をクリックしないと影が消えないのは仕様
+    .mat-mdc-checkbox .mdc-checkbox__ripple {
+      background: orange;
+    }
+  }
+
+  // ラジオボタン
+  #radio-wrap {
+    // ボタン間の距離
+    .mat-mdc-radio-button ~ .mat-mdc-radio-button {
+      margin-left: 3rem;
+    }
+    // 未選択時の枠の色
+    .mdc-radio__outer-circle {
+      border-color: pink;
+    }
+    // enabledにした際の色
+    .mat-mdc-radio-button.mat-accent {
+      --mdc-radio-selected-focus-icon-color: limegreen;
+      --mdc-radio-selected-hover-icon-color: limegreen;
+      --mdc-radio-selected-icon-color: limegreen;
+      --mdc-radio-selected-pressed-icon-color: limegreen;
+      --mat-mdc-radio-checked-ripple-color: limegreen;
+    }
+    // 選択した際の枠線の色
+    .mat-mdc-radio-button
+      .mdc-radio
+      .mdc-radio__native-control:enabled:checked
+      + .mdc-radio__background
+      .mdc-radio__outer-circle {
+      border-color: limegreen !important;
+    }
+    // ラベルの文字色
+    .mat-mdc-radio-button .mdc-form-field {
+      color: red;
+    }
+  }
+}
